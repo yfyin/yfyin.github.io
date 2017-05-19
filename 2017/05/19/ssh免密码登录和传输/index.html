@@ -3,15 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: golang | Wild Horse</title>
+    <title>ssh免密码登录和传输 | Wild Horse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Wild Horse">
-<meta property="og:url" content="https://yfyin.github.com/tags/golang/index.html">
+        <meta name="keywords" content="linux,ssh,tool,scp" />
+    
+    <meta name="description" content="Why玩linux的，都会遇到需要操作一大堆serve时，要切换不同身份，端口和密码去分别登录，烦人的很，其实ssh提供了一种基于非对称加密的方法实现免密码登录 How假定需要从A传输文件或登录到B，执行以下步骤 Step 1在A机器上生成的ssh public-private keys，如果已经生成过了，可忽略这一步1ssh-keygen -t rsa 就会在~/.ssh/目录下生成一个id_r">
+<meta name="keywords" content="linux,ssh,tool,scp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ssh免密码登录和传输">
+<meta property="og:url" content="https://yfyin.github.com/2017/05/19/ssh免密码登录和传输/index.html">
 <meta property="og:site_name" content="Wild Horse">
+<meta property="og:description" content="Why玩linux的，都会遇到需要操作一大堆serve时，要切换不同身份，端口和密码去分别登录，烦人的很，其实ssh提供了一种基于非对称加密的方法实现免密码登录 How假定需要从A传输文件或登录到B，执行以下步骤 Step 1在A机器上生成的ssh public-private keys，如果已经生成过了，可忽略这一步1ssh-keygen -t rsa 就会在~/.ssh/目录下生成一个id_r">
+<meta property="og:updated_time" content="2017-05-19T09:48:23.232Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wild Horse">
+<meta name="twitter:title" content="ssh免密码登录和传输">
+<meta name="twitter:description" content="Why玩linux的，都会遇到需要操作一大堆serve时，要切换不同身份，端口和密码去分别登录，烦人的很，其实ssh提供了一种基于非对称加密的方法实现免密码登录 How假定需要从A传输文件或登录到B，执行以下步骤 Step 1在A机器上生成的ssh public-private keys，如果已经生成过了，可忽略这一步1ssh-keygen -t rsa 就会在~/.ssh/目录下生成一个id_r">
     
 
     
@@ -121,74 +128,140 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>golang</em>
+    <a class="page-title-link" href="/categories/Technology/">Technology</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-ssh免密码登录和传输" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/golang中对象方法作为函数指针/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
-            </div>
-            <div class="date"><time datetime="2017-05-19T03:10:15.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/golang中对象方法作为函数指针/">golang中对象方法作为函数指针</a>
+        ssh免密码登录和传输
         </h1>
     
 
-        <p class="article-excerpt">
-            [TOC]
-裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&#123;&#125;func Test(FT)&#123;&#125;Test(Fa) //pass function as parameter
-但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/19/ssh免密码登录和传输/" class="article-date">
+            <time datetime="2017-05-19T09:25:19.000Z" itemprop="datePublished">2017-05-19</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/linux/">linux</a>, <a class="tag-link" href="/tags/scp/">scp</a>, <a class="tag-link" href="/tags/ssh/">ssh</a>, <a class="tag-link" href="/tags/tool/">tool</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>玩linux的，都会遇到需要操作一大堆serve时，要切换不同身份，端口和密码去分别登录，烦人的很，其实ssh提供了一种基于非对称加密的方法实现免密码登录</p>
+<h2 id="How"><a href="#How" class="headerlink" title="How"></a>How</h2><p>假定需要从A传输文件或登录到B，执行以下步骤</p>
+<h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>在A机器上生成的ssh public-private keys，如果已经生成过了，可忽略这一步<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div></pre></td></tr></table></figure></p>
+<p>就会在~/.ssh/目录下生成一个id_rsa (private key) and id_ras.pub (public key)</p>
+<h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h3><p>在A机器上配置~/.ssh/config文件,add below content<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Host fire</div><div class="line">    HostName 115.159.114.116</div><div class="line">    Port 22</div><div class="line">    User ubuntu</div><div class="line">    IdentityFile ~/.ssh/id_rsa</div></pre></td></tr></table></figure></p>
+<p>Note:</p>
+<ul>
+<li>‘Port’ field default to 22,</li>
+<li>‘User’ default to the current account name on machine A</li>
+<li>‘IdentityFile’ is the private key you want to user on machine A, aka the private key file you generated in step 1</li>
+</ul>
+<p>Please modify them if necessary </p>
+<h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h3><p>在机器B上，添加机器A的public key的完成内容到 ~/.ssh/authorized_keys，create the file if not not exist<br>可以添加多个哦</p>
+<p>添加完成后，就可以在A上免密ssh到B了</p>
+<pre><code>ssh fire
+scp ./xxx fire:~/
+</code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/" target="_blank" rel="external">Simplify Your Life With an SSH Config File
+</a></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://yfyin.github.com/2017/05/19/ssh免密码登录和传输/" data-id="cj2vnxh5h0000zgonntw5lima" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -217,6 +290,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/05/19/golang中对象方法作为函数指针/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">golang中对象方法作为函数指针</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -394,11 +480,13 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://yfyin.github.com/2017/05/19/ssh免密码登录和传输/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
