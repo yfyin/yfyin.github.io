@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Linux,golang,pointer" />
     
-    <meta name="description" content="[TOC] 裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
+    <meta name="description" content="裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
 <meta name="keywords" content="Linux,golang,pointer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="golang中对象方法作为函数指针">
 <meta property="og:url" content="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/index.html">
 <meta property="og:site_name" content="Wild Horse">
-<meta property="og:description" content="[TOC] 裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
-<meta property="og:updated_time" content="2017-05-19T03:19:01.371Z">
+<meta property="og:description" content="裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
+<meta property="og:updated_time" content="2017-05-19T10:07:46.813Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="golang中对象方法作为函数指针">
-<meta name="twitter:description" content="[TOC] 裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
+<meta name="twitter:description" content="裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
     
 
     
@@ -164,7 +164,12 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>[TOC]</p>
+            <div class="toc">
+
+<!-- toc -->
+<!-- tocstop -->
+</div>
+
 <p>裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> FT <span class="function"><span class="keyword">func</span><span class="params">(<span class="keyword">int</span>)</span></span></div><div class="line"><span class="title">func</span> <span class="title">Fa</span><span class="params">(<span class="keyword">int</span>)</span>&#123;&#125;</div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">Test</span><span class="params">(FT)</span></span>&#123;&#125;</div><div class="line"></div><div class="line">Test(Fa) <span class="comment">//pass function as parameter</span></div></pre></td></tr></table></figure></p>
 <p>但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？<br><figure class="highlight golang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> A <span class="keyword">struct</span> &#123;</div><div class="line">   <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *A)</span> <span class="title">Foo</span><span class="params">(bar, baz <span class="keyword">int</span>)</span></span> &#123;&#125;</div><div class="line"></div><div class="line">b := <span class="built_in">new</span>(A)</div><div class="line">foob := b.Foo  <span class="comment">// foob is of type func(int, int)</span></div></pre></td></tr></table></figure></p>
 <p>答案是肯定的，而且很智能：<br><strong>当特定对象实例的method作为函数指针时传递时，接受者会保证在调用的时候，调用到是这个对象实例的method，method的任何操作都会针对该对象实例生效，而且不需要传任何类似于this、self指针之类的东西</strong></p>
@@ -179,7 +184,7 @@
 
 
 
-    <a data-url="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/" data-id="cj2vnxhb1000rzgontzcm31sl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/" data-id="cj2vouw7u00009con972ldz2m" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

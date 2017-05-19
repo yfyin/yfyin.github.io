@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="linux,memory,os" />
     
-    <meta name="description" content="Basic knowlege of memory arch  [TOC] why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen">
+    <meta name="description" content="Basic knowlege of memory arch      why what SMP（UMA） MPP NUMA       why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cp">
 <meta name="keywords" content="linux,memory,os">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内存架构">
 <meta property="og:url" content="https://yfyin.github.com/2017/05/19/内存架构/index.html">
 <meta property="og:site_name" content="Wild Horse">
-<meta property="og:description" content="Basic knowlege of memory arch  [TOC] why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen">
-<meta property="og:updated_time" content="2017-05-19T03:20:23.987Z">
+<meta property="og:description" content="Basic knowlege of memory arch      why what SMP（UMA） MPP NUMA       why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cp">
+<meta property="og:updated_time" content="2017-05-19T10:15:23.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内存架构">
-<meta name="twitter:description" content="Basic knowlege of memory arch  [TOC] why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen">
+<meta name="twitter:description" content="Basic knowlege of memory arch      why what SMP（UMA） MPP NUMA       why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cp">
     
 
     
@@ -167,15 +167,29 @@
             <blockquote>
 <p>Basic knowlege of memory arch</p>
 </blockquote>
-<p>[TOC]</p>
+<div class="toc">
+
+<!-- toc -->
+<ul>
+<li><a href="#why">why</a></li>
+<li><a href="#what">what</a><ul>
+<li><a href="#smpuma">SMP（UMA）</a></li>
+<li><a href="#mpp">MPP</a></li>
+<li><a href="#numa">NUMA</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+</div>
+
 <h2 id="why"><a href="#why" class="headerlink" title="why"></a>why</h2><ul>
 <li>to solve the mismatch of cpu and memory speed, avoid cpu hungry</li>
 <li>to decrease the frequency memory access from cpu, and access cpu cache if that have to happen</li>
 <li>do every effort to avoid missing hit of cpu cache</li>
 </ul>
-<h2 id="what"><a href="#what" class="headerlink" title="what"></a>what</h2><h3 id="SMP（UMA）"><a href="#SMP（UMA）" class="headerlink" title="SMP（UMA）"></a>SMP（UMA）</h3><p>一致性内存架构，早期的架构，多个CPU共享使用一块物理内存，总线硬件负责协调各CPU对内存的访问，所以对各个CPU来说，看到的内存数据是一致的，所以才叫做Uniform Memory Access</p>
-<h3 id="MPP"><a href="#MPP" class="headerlink" title="MPP"></a>MPP</h3><p>针对SMP share one memory的缺点，设计分布式存储器模式，every cpu have their own individual memory, called a node, all the node are full connected as one system, the consistency among nodes is guaranted by software not hardware(bus)。每个CPU只能访问自己的本地内存，这样可以提高各个cpu的运行效率，避免对单一的内存忙等</p>
-<p>###NUMA<br>非一致性内存架构，参考了MPP的设计，但是允许cpu访问非本地的内存，也就是说cpu对内存的访问分为local access and remote access，访问时间是不一致的，远程访问的速度当然要慢些</p>
+<h2 id="what"><a href="#what" class="headerlink" title="what"></a>what</h2><h3 id="smpuma"><a href="#SMP（UMA）" class="headerlink" title="SMP（UMA）"></a>SMP（UMA）</h3><p>一致性内存架构，早期的架构，多个CPU共享使用一块物理内存，总线硬件负责协调各CPU对内存的访问，所以对各个CPU来说，看到的内存数据是一致的，所以才叫做Uniform Memory Access</p>
+<h3 id="mpp"><a href="#MPP" class="headerlink" title="MPP"></a>MPP</h3><p>针对SMP share one memory的缺点，设计分布式存储器模式，every cpu have their own individual memory, called a node, all the node are full connected as one system, the consistency among nodes is guaranted by software not hardware(bus)。每个CPU只能访问自己的本地内存，这样可以提高各个cpu的运行效率，避免对单一的内存忙等</p>
+<h3 id="numa"><a href="#NUMA" class="headerlink" title="NUMA"></a>NUMA</h3><p>非一致性内存架构，参考了MPP的设计，但是允许cpu访问非本地的内存，也就是说cpu对内存的访问分为local access and remote access，访问时间是不一致的，远程访问的速度当然要慢些</p>
 <p>缺点是在共享内存时维持高速缓存一致性的开销非常大，尤其时当多处理器快速连续的尝试访问相同的内存区时问题更突出，解决方法有：使用缓存一致性协议(MESIF，SCI)尽量减少需要维护缓存一致性的通信</p>
 <p>所以，NUMA设计的重点是让处理器快速的访问在同一单元的内存</p>
 
@@ -185,7 +199,7 @@
 
 
 
-    <a data-url="https://yfyin.github.com/2017/05/19/内存架构/" data-id="cj2vnxh5w0001zgonwoowe8tv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yfyin.github.com/2017/05/19/内存架构/" data-id="cj2vouwa0000k9conhdajllkq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
