@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Archive: 2017/5 | 野马兰心</title>
+    <title>Archive: 2017/5 | Wild Horse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta property="og:type" content="website">
-<meta property="og:title" content="野马兰心">
+<meta property="og:title" content="Wild Horse">
 <meta property="og:url" content="https://yfyin.github.com/archives/2017/05/index.html">
-<meta property="og:site_name" content="野马兰心">
+<meta property="og:site_name" content="Wild Horse">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="野马兰心">
+<meta name="twitter:title" content="Wild Horse">
     
 
     
-        <link rel="alternate" href="/" title="野马兰心" type="application/atom+xml" />
+        <link rel="alternate" href="/" title="Wild Horse" type="application/atom+xml" />
     
 
     
@@ -50,6 +50,10 @@
                         <a href="/" class="logo"></a>
                     </h1>
                     
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Life Recorder</p>
+                        </h2>
+                    
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -60,7 +64,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/life/">life</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/work/">work</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Technology/">Technology</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -142,7 +146,7 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/05/19/second-blog/" class="thumbnail">
+        <a href="/2017/05/19/golang中对象方法作为函数指针/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -152,7 +156,7 @@
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/second-blog/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/">0</span>
     
 </span>
 
@@ -162,19 +166,21 @@
         
         <div class="article-meta">
             <div class="category">
-            
+            <a class="article-category-link" href="/categories/Technology/">Technology</a>
             </div>
-            <div class="date"><time datetime="2017-05-19T02:11:31.000Z" itemprop="datePublished">2017-05-19</time></div>
+            <div class="date"><time datetime="2017-05-19T03:10:15.000Z" itemprop="datePublished">2017-05-19</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/second-blog/">second blog</a>
+        <a href="/2017/05/19/golang中对象方法作为函数指针/">golang中对象方法作为函数指针</a>
         </h1>
     
 
         <p class="article-excerpt">
-            
+            [TOC]
+裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&#123;&#125;func Test(FT)&#123;&#125;Test(Fa) //pass function as parameter
+但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s
         </p>
     </div>
 </article>
@@ -187,7 +193,7 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/05/19/first-blog/" class="thumbnail">
+        <a href="/2017/05/19/内存架构/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -197,7 +203,7 @@
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/first-blog/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/内存架构/">0</span>
     
 </span>
 
@@ -207,21 +213,25 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/life/">life</a>
+            <a class="article-category-link" href="/categories/Technology/">Technology</a>
             </div>
-            <div class="date"><time datetime="2017-05-19T01:59:19.000Z" itemprop="datePublished">2017-05-19</time></div>
+            <div class="date"><time datetime="2017-05-19T03:08:19.000Z" itemprop="datePublished">2017-05-19</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/first-blog/">first blog</a>
+        <a href="/2017/05/19/内存架构/">内存架构</a>
         </h1>
     
 
         <p class="article-excerpt">
-            welcome to my blog, this is my first blog send from hexothx to hexo,such a good tool
-titile 11.1this is just for test,goodbye
-titile 2Enough,end here
+            
+Basic knowlege of memory arch
+
+[TOC]
+why
+to solve the mismatch of cpu and memory speed, avoid cpu hungry
+to decrease the frequency memory access from cpu, and access cpu cache if that have to happen
 
         </p>
     </div>
@@ -239,7 +249,7 @@ titile 2Enough,end here
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/05/17/hello-world/" class="thumbnail">
+        <a href="/2017/05/19/术语解释/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -249,7 +259,7 @@ titile 2Enough,end here
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/17/hello-world/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/术语解释/">0</span>
     
 </span>
 
@@ -259,20 +269,24 @@ titile 2Enough,end here
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/work/">work</a>
+            <a class="article-category-link" href="/categories/Technology/">Technology</a>
             </div>
-            <div class="date"><time datetime="2017-05-17T09:27:32.589Z" itemprop="datePublished">2017-05-17</time></div>
+            <div class="date"><time datetime="2017-05-19T03:07:56.000Z" itemprop="datePublished">2017-05-19</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/17/hello-world/">Hello World</a>
+        <a href="/2017/05/19/术语解释/">术语解释</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+            网络错误粘包
+根源是网络传输的分包、组包 + 发送端、接收端的缓冲区存在
+只存在于TCP流协议中，UDP传输不存在，因为，TCP会分、并包来提高效率，所以包之间没有消息保护边界
+TCP异构的消息不存在这个问题，因为结构不同，接收端不会迷惑，同构（譬如同样结构的的一串字符串）时，由于发送端网络延时/接收端不能及时接受时，两串消息就可能在接收端完全混合在一起，导致无法识别
+
+
         </p>
     </div>
 </article>
@@ -356,7 +370,7 @@ Quick
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/05/19/second-blog/" class="thumbnail">
+                            <a href="/2017/05/19/golang中对象方法作为函数指针/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -367,16 +381,16 @@ Quick
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/05/19/second-blog/" class="title">second blog</a></p>
-                            <p class="item-date"><time datetime="2017-05-19T02:11:31.000Z" itemprop="datePublished">2017-05-19</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Technology/">Technology</a></p>
+                            <p class="item-title"><a href="/2017/05/19/golang中对象方法作为函数指针/" class="title">golang中对象方法作为函数指针</a></p>
+                            <p class="item-date"><time datetime="2017-05-19T03:10:15.000Z" itemprop="datePublished">2017-05-19</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/05/19/first-blog/" class="thumbnail">
+                            <a href="/2017/05/19/内存架构/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -387,16 +401,16 @@ Quick
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/life/">life</a></p>
-                            <p class="item-title"><a href="/2017/05/19/first-blog/" class="title">first blog</a></p>
-                            <p class="item-date"><time datetime="2017-05-19T01:59:19.000Z" itemprop="datePublished">2017-05-19</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Technology/">Technology</a></p>
+                            <p class="item-title"><a href="/2017/05/19/内存架构/" class="title">内存架构</a></p>
+                            <p class="item-date"><time datetime="2017-05-19T03:08:19.000Z" itemprop="datePublished">2017-05-19</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/05/17/hello-world/" class="thumbnail">
+                            <a href="/2017/05/19/术语解释/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -407,9 +421,9 @@ Quick
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/work/">work</a></p>
-                            <p class="item-title"><a href="/2017/05/17/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2017-05-17T09:27:32.589Z" itemprop="datePublished">2017-05-17</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Technology/">Technology</a></p>
+                            <p class="item-title"><a href="/2017/05/19/术语解释/" class="title">术语解释</a></p>
+                            <p class="item-date"><time datetime="2017-05-19T03:07:56.000Z" itemprop="datePublished">2017-05-19</time></p>
                         </div>
                     </li>
                 
@@ -422,7 +436,7 @@ Quick
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/work/">work</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -442,7 +456,7 @@ Quick
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/are/">are</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/how/">how</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/you/">you</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/">memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">network</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/os/">os</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pointer/">pointer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tcp/">tcp</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -452,7 +466,7 @@ Quick
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/are/" style="font-size: 10px;">are</a> <a href="/tags/how/" style="font-size: 20px;">how</a> <a href="/tags/you/" style="font-size: 20px;">you</a>
+            <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/memory/" style="font-size: 10px;">memory</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/os/" style="font-size: 10px;">os</a> <a href="/tags/pointer/" style="font-size: 10px;">pointer</a> <a href="/tags/tcp/" style="font-size: 10px;">tcp</a>
         </div>
     </div>
 

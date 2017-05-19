@@ -3,15 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Wild Horse</title>
+    <title>内存架构 | Wild Horse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Wild Horse">
-<meta property="og:url" content="https://yfyin.github.com/index.html">
+        <meta name="keywords" content="linux,memory,os" />
+    
+    <meta name="description" content="Basic knowlege of memory arch  [TOC] why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen">
+<meta name="keywords" content="linux,memory,os">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内存架构">
+<meta property="og:url" content="https://yfyin.github.com/2017/05/19/内存架构/index.html">
 <meta property="og:site_name" content="Wild Horse">
+<meta property="og:description" content="Basic knowlege of memory arch  [TOC] why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen">
+<meta property="og:updated_time" content="2017-05-19T03:20:23.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wild Horse">
+<meta name="twitter:title" content="内存架构">
+<meta name="twitter:description" content="Basic knowlege of memory arch  [TOC] why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen">
     
 
     
@@ -123,180 +130,136 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="home">Home</em>
+    <a class="page-title-link" href="/categories/Technology/">Technology</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-内存架构" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/golang中对象方法作为函数指针/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
-            </div>
-            <div class="date"><time datetime="2017-05-19T03:10:15.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/golang中对象方法作为函数指针/">golang中对象方法作为函数指针</a>
+        内存架构
         </h1>
     
 
-        <p class="article-excerpt">
-            [TOC]
-裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&#123;&#125;func Test(FT)&#123;&#125;Test(Fa) //pass function as parameter
-但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/19/内存架构/" class="article-date">
+            <time datetime="2017-05-19T03:08:19.000Z" itemprop="datePublished">2017-05-19</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/内存架构/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/内存架构/">0</span>
-    
-</span>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/linux/">linux</a>, <a class="tag-link" href="/tags/memory/">memory</a>, <a class="tag-link" href="/tags/os/">os</a>
+    </div>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
             </div>
-            <div class="date"><time datetime="2017-05-19T03:08:19.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/内存架构/">内存架构</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote>
+<p>Basic knowlege of memory arch</p>
+</blockquote>
+<p>[TOC]</p>
+<h2 id="why"><a href="#why" class="headerlink" title="why"></a>why</h2><ul>
+<li>to solve the mismatch of cpu and memory speed, avoid cpu hungry</li>
+<li>to decrease the frequency memory access from cpu, and access cpu cache if that have to happen</li>
+<li>do every effort to avoid missing hit of cpu cache</li>
+</ul>
+<h2 id="what"><a href="#what" class="headerlink" title="what"></a>what</h2><h3 id="SMP（UMA）"><a href="#SMP（UMA）" class="headerlink" title="SMP（UMA）"></a>SMP（UMA）</h3><p>一致性内存架构，早期的架构，多个CPU共享使用一块物理内存，总线硬件负责协调各CPU对内存的访问，所以对各个CPU来说，看到的内存数据是一致的，所以才叫做Uniform Memory Access</p>
+<h3 id="MPP"><a href="#MPP" class="headerlink" title="MPP"></a>MPP</h3><p>针对SMP share one memory的缺点，设计分布式存储器模式，every cpu have their own individual memory, called a node, all the node are full connected as one system, the consistency among nodes is guaranted by software not hardware(bus)。每个CPU只能访问自己的本地内存，这样可以提高各个cpu的运行效率，避免对单一的内存忙等</p>
+<p>###NUMA<br>非一致性内存架构，参考了MPP的设计，但是允许cpu访问非本地的内存，也就是说cpu对内存的访问分为local access and remote access，访问时间是不一致的，远程访问的速度当然要慢些</p>
+<p>缺点是在共享内存时维持高速缓存一致性的开销非常大，尤其时当多处理器快速连续的尝试访问相同的内存区时问题更突出，解决方法有：使用缓存一致性协议(MESIF，SCI)尽量减少需要维护缓存一致性的通信</p>
+<p>所以，NUMA设计的重点是让处理器快速的访问在同一单元的内存</p>
 
-        <p class="article-excerpt">
+        </div>
+        <footer class="article-footer">
             
-Basic knowlege of memory arch
 
-[TOC]
-why
-to solve the mismatch of cpu and memory speed, avoid cpu hungry
-to decrease the frequency memory access from cpu, and access cpu cache if that have to happen
 
-        </p>
+
+    <a data-url="https://yfyin.github.com/2017/05/19/内存架构/" data-id="cj2va2ie30001zoonf5iaucox" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
 
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/术语解释/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/术语解释/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
-            </div>
-            <div class="date"><time datetime="2017-05-19T03:07:56.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/术语解释/">术语解释</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            网络错误粘包
-根源是网络传输的分包、组包 + 发送端、接收端的缓冲区存在
-只存在于TCP流协议中，UDP传输不存在，因为，TCP会分、并包来提高效率，所以包之间没有消息保护边界
-TCP异构的消息不存在这个问题，因为结构不同，接收端不会迷惑，同构（譬如同样结构的的一串字符串）时，由于发送端网络延时/接收端不能及时接受时，两串消息就可能在接收端完全混合在一起，导致无法识别
-
-
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
+
     
-        </div>
-    
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -357,6 +320,29 @@ TCP异构的消息不存在这个问题，因为结构不同，接收端不会�
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/05/19/golang中对象方法作为函数指针/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            golang中对象方法作为函数指针
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/05/19/术语解释/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">术语解释</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -514,11 +500,13 @@ TCP异构的消息不存在这个问题，因为结构不同，接收端不会�
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://yfyin.github.com/2017/05/19/内存架构/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

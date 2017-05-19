@@ -3,15 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Wild Horse</title>
+    <title>术语解释 | Wild Horse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Wild Horse">
-<meta property="og:url" content="https://yfyin.github.com/index.html">
+        <meta name="keywords" content="tcp,network" />
+    
+    <meta name="description" content="网络错误粘包 根源是网络传输的分包、组包 + 发送端、接收端的缓冲区存在 只存在于TCP流协议中，UDP传输不存在，因为，TCP会分、并包来提高效率，所以包之间没有消息保护边界 TCP异构的消息不存在这个问题，因为结构不同，接收端不会迷惑，同构（譬如同样结构的的一串字符串）时，由于发送端网络延时/接收端不能及时接受时，两串消息就可能在接收端完全混合在一起，导致无法识别">
+<meta name="keywords" content="tcp,network">
+<meta property="og:type" content="article">
+<meta property="og:title" content="术语解释">
+<meta property="og:url" content="https://yfyin.github.com/2017/05/19/术语解释/index.html">
 <meta property="og:site_name" content="Wild Horse">
+<meta property="og:description" content="网络错误粘包 根源是网络传输的分包、组包 + 发送端、接收端的缓冲区存在 只存在于TCP流协议中，UDP传输不存在，因为，TCP会分、并包来提高效率，所以包之间没有消息保护边界 TCP异构的消息不存在这个问题，因为结构不同，接收端不会迷惑，同构（譬如同样结构的的一串字符串）时，由于发送端网络延时/接收端不能及时接受时，两串消息就可能在接收端完全混合在一起，导致无法识别">
+<meta property="og:updated_time" content="2017-05-19T03:20:35.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wild Horse">
+<meta name="twitter:title" content="术语解释">
+<meta name="twitter:description" content="网络错误粘包 根源是网络传输的分包、组包 + 发送端、接收端的缓冲区存在 只存在于TCP流协议中，UDP传输不存在，因为，TCP会分、并包来提高效率，所以包之间没有消息保护边界 TCP异构的消息不存在这个问题，因为结构不同，接收端不会迷惑，同构（譬如同样结构的的一串字符串）时，由于发送端网络延时/接收端不能及时接受时，两串消息就可能在接收端完全混合在一起，导致无法识别">
     
 
     
@@ -123,180 +130,127 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="home">Home</em>
+    <a class="page-title-link" href="/categories/Technology/">Technology</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-术语解释" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/golang中对象方法作为函数指针/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
-            </div>
-            <div class="date"><time datetime="2017-05-19T03:10:15.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/golang中对象方法作为函数指针/">golang中对象方法作为函数指针</a>
+        术语解释
         </h1>
     
 
-        <p class="article-excerpt">
-            [TOC]
-裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&#123;&#125;func Test(FT)&#123;&#125;Test(Fa) //pass function as parameter
-但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/19/术语解释/" class="article-date">
+            <time datetime="2017-05-19T03:07:56.000Z" itemprop="datePublished">2017-05-19</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/内存架构/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/内存架构/">0</span>
-    
-</span>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/network/">network</a>, <a class="tag-link" href="/tags/tcp/">tcp</a>
+    </div>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
             </div>
-            <div class="date"><time datetime="2017-05-19T03:08:19.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/内存架构/">内存架构</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h3><h4 id="粘包"><a href="#粘包" class="headerlink" title="粘包"></a>粘包</h4><ul>
+<li>根源是网络传输的分包、组包 + 发送端、接收端的缓冲区存在</li>
+<li>只存在于TCP流协议中，UDP传输不存在，因为，TCP会分、并包来提高效率，所以包之间没有消息保护边界</li>
+<li>TCP异构的消息不存在这个问题，因为结构不同，接收端不会迷惑，同构（譬如同样结构的的一串字符串）时，由于发送端网络延时/接收端不能及时接受时，两串消息就可能在接收端完全混合在一起，导致无法识别</li>
+</ul>
 
-        <p class="article-excerpt">
+        </div>
+        <footer class="article-footer">
             
-Basic knowlege of memory arch
 
-[TOC]
-why
-to solve the mismatch of cpu and memory speed, avoid cpu hungry
-to decrease the frequency memory access from cpu, and access cpu cache if that have to happen
 
-        </p>
+
+    <a data-url="https://yfyin.github.com/2017/05/19/术语解释/" data-id="cj2va2iej0004zoonqyerwyri" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
 
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/术语解释/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/术语解释/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
-            </div>
-            <div class="date"><time datetime="2017-05-19T03:07:56.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/术语解释/">术语解释</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            网络错误粘包
-根源是网络传输的分包、组包 + 发送端、接收端的缓冲区存在
-只存在于TCP流协议中，UDP传输不存在，因为，TCP会分、并包来提高效率，所以包之间没有消息保护边界
-TCP异构的消息不存在这个问题，因为结构不同，接收端不会迷惑，同构（譬如同样结构的的一串字符串）时，由于发送端网络延时/接收端不能及时接受时，两串消息就可能在接收端完全混合在一起，导致无法识别
-
-
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
+
     
-        </div>
-    
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -357,6 +311,23 @@ TCP异构的消息不存在这个问题，因为结构不同，接收端不会�
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/05/19/内存架构/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            内存架构
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -514,11 +485,13 @@ TCP异构的消息不存在这个问题，因为结构不同，接收端不会�
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://yfyin.github.com/2017/05/19/术语解释/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

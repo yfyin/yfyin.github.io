@@ -3,15 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Wild Horse</title>
+    <title>golang中对象方法作为函数指针 | Wild Horse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Wild Horse">
-<meta property="og:url" content="https://yfyin.github.com/index.html">
+        <meta name="keywords" content="Linux,golang,pointer" />
+    
+    <meta name="description" content="[TOC] 裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
+<meta name="keywords" content="Linux,golang,pointer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="golang中对象方法作为函数指针">
+<meta property="og:url" content="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/index.html">
 <meta property="og:site_name" content="Wild Horse">
+<meta property="og:description" content="[TOC] 裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
+<meta property="og:updated_time" content="2017-05-19T03:19:01.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wild Horse">
+<meta name="twitter:title" content="golang中对象方法作为函数指针">
+<meta name="twitter:description" content="[TOC] 裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&amp;#123;&amp;#125;func Test(FT)&amp;#123;&amp;#125;Test(Fa) //pass function as parameter 但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s">
     
 
     
@@ -123,180 +130,130 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="home">Home</em>
+    <a class="page-title-link" href="/categories/Technology/">Technology</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-golang中对象方法作为函数指针" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/golang中对象方法作为函数指针/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
-            </div>
-            <div class="date"><time datetime="2017-05-19T03:10:15.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/golang中对象方法作为函数指针/">golang中对象方法作为函数指针</a>
+        golang中对象方法作为函数指针
         </h1>
     
 
-        <p class="article-excerpt">
-            [TOC]
-裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如12345type FT func(int)func Fa(int)&#123;&#125;func Test(FT)&#123;&#125;Test(Fa) //pass function as parameter
-但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？12345678type A s
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/19/golang中对象方法作为函数指针/" class="article-date">
+            <time datetime="2017-05-19T03:10:15.000Z" itemprop="datePublished">2017-05-19</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/内存架构/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/内存架构/">0</span>
-    
-</span>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Linux/">Linux</a>, <a class="tag-link" href="/tags/golang/">golang</a>, <a class="tag-link" href="/tags/pointer/">pointer</a>
+    </div>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
             </div>
-            <div class="date"><time datetime="2017-05-19T03:08:19.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/内存架构/">内存架构</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>[TOC]</p>
+<p>裸函数作为指针不是什么新鲜事，其它的语言也是可以的，golang当然也可以，譬如<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> FT <span class="function"><span class="keyword">func</span><span class="params">(<span class="keyword">int</span>)</span></span></div><div class="line"><span class="title">func</span> <span class="title">Fa</span><span class="params">(<span class="keyword">int</span>)</span>&#123;&#125;</div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">Test</span><span class="params">(FT)</span></span>&#123;&#125;</div><div class="line"></div><div class="line">Test(Fa) <span class="comment">//pass function as parameter</span></div></pre></td></tr></table></figure></p>
+<p>但是像下面这样，对象实例的方法是否可以作为函数参数传递呢？<br><figure class="highlight golang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> A <span class="keyword">struct</span> &#123;</div><div class="line">   <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *A)</span> <span class="title">Foo</span><span class="params">(bar, baz <span class="keyword">int</span>)</span></span> &#123;&#125;</div><div class="line"></div><div class="line">b := <span class="built_in">new</span>(A)</div><div class="line">foob := b.Foo  <span class="comment">// foob is of type func(int, int)</span></div></pre></td></tr></table></figure></p>
+<p>答案是肯定的，而且很智能：<br><strong>当特定对象实例的method作为函数指针时传递时，接受者会保证在调用的时候，调用到是这个对象实例的method，method的任何操作都会针对该对象实例生效，而且不需要传任何类似于this、self指针之类的东西</strong></p>
+<p><strong>换句话说，对象实例+method 作为绑定的整体传递给接受者的</strong></p>
+<p>通过以下代码可以<a href="https://play.golang.org/p/dCeff53G4t" target="_blank" rel="external">验证</a><br><figure class="highlight golang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"></div><div class="line"><span class="keyword">import</span> (</div><div class="line">	<span class="string">"fmt"</span></div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">type</span> Outer <span class="keyword">struct</span>&#123;</div><div class="line">	a <span class="keyword">string</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="params">(o *Outer)</span><span class="title">Hello</span><span class="params">(in *Inner)</span></span>&#123;</div><div class="line">   fmt.Println(<span class="string">"Inner:"</span>,in,<span class="string">"\tcall\tOuter:"</span>,o.a)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">type</span> Inner <span class="keyword">struct</span>&#123;</div><div class="line">        a <span class="keyword">string</span></div><div class="line">	cb Cb</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">type</span> Cb <span class="function"><span class="keyword">func</span><span class="params">(*Inner)</span></span></div><div class="line"></div><div class="line"><span class="title">func</span> <span class="params">(in *Inner)</span><span class="title">Register</span><span class="params">(cb Cb)</span>&#123;</div><div class="line">	in.cb = cb</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="params">(in *Inner)</span><span class="title">Say</span><span class="params">()</span></span>&#123;</div><div class="line">	in.cb(in)</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">	out1 := Outer&#123;a:<span class="string">"out1 instance"</span>&#125;</div><div class="line">	out2 := Outer&#123;a:<span class="string">"out2 instance"</span>&#125;</div><div class="line">	</div><div class="line">	fmt.Println(<span class="string">"out1 :"</span>,&amp;out1)</div><div class="line">	fmt.Println(<span class="string">"out2 :"</span>,&amp;out2)	</div><div class="line">	</div><div class="line">	in1 := Inner&#123;a:<span class="string">"int1 instance"</span>&#125;</div><div class="line">	</div><div class="line">	in1.Register(out1.Hello)</div><div class="line">        in1.Say()</div><div class="line">	in1.Register(out2.Hello)</div><div class="line">	in1.Say()</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>执行起来输出如下结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">out1 : &amp;&#123;out1 instance&#125;</div><div class="line">out2 : &amp;&#123;out2 instance&#125;</div><div class="line">Inner: &amp;&#123;int1 instance 0xc6be0&#125; 	call	Outer: out1 instance</div><div class="line">Inner: &amp;&#123;int1 instance 0xc6be0&#125; 	call	Outer: out2 instance</div></pre></td></tr></table></figure></p>
+<p>参考文章<br><a href="https://groups.google.com/forum/#!topic/golang-nuts/t1r6px7yGIY" target="_blank" rel="external">https://groups.google.com/forum/#!topic/golang-nuts/t1r6px7yGIY</a><br><a href="https://github.com/golang/go/issues/2280" target="_blank" rel="external">https://github.com/golang/go/issues/2280</a></p>
 
-        <p class="article-excerpt">
+        </div>
+        <footer class="article-footer">
             
-Basic knowlege of memory arch
 
-[TOC]
-why
-to solve the mismatch of cpu and memory speed, avoid cpu hungry
-to decrease the frequency memory access from cpu, and access cpu cache if that have to happen
 
-        </p>
+
+    <a data-url="https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/" data-id="cj2va2idt0000zoonou5zm9up" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
 
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/19/术语解释/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://yfyin.github.com/2017/05/19/术语解释/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Technology/">Technology</a>
-            </div>
-            <div class="date"><time datetime="2017-05-19T03:07:56.000Z" itemprop="datePublished">2017-05-19</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/19/术语解释/">术语解释</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            网络错误粘包
-根源是网络传输的分包、组包 + 发送端、接收端的缓冲区存在
-只存在于TCP流协议中，UDP传输不存在，因为，TCP会分、并包来提高效率，所以包之间没有消息保护边界
-TCP异构的消息不存在这个问题，因为结构不同，接收端不会迷惑，同构（譬如同样结构的的一串字符串）时，由于发送端网络延时/接收端不能及时接受时，两串消息就可能在接收端完全混合在一起，导致无法识别
-
-
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
+
     
-        </div>
-    
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -357,6 +314,19 @@ TCP异构的消息不存在这个问题，因为结构不同，接收端不会�
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/05/19/内存架构/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">内存架构</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -514,11 +484,13 @@ TCP异构的消息不存在这个问题，因为结构不同，接收端不会�
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://yfyin.github.com/2017/05/19/golang中对象方法作为函数指针/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
