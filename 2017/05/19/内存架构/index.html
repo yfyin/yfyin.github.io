@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="linux,memory,os" />
     
-    <meta name="description" content="Basic knowlege of memory arch      why what SMP（UMA） MPP NUMA       why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cp">
+    <meta name="description" content="Basic knowlege of memory arch  why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen do eve">
 <meta name="keywords" content="linux,memory,os">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内存架构">
 <meta property="og:url" content="https://yfyin.github.com/2017/05/19/内存架构/index.html">
 <meta property="og:site_name" content="Wild Horse">
-<meta property="og:description" content="Basic knowlege of memory arch      why what SMP（UMA） MPP NUMA       why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cp">
-<meta property="og:updated_time" content="2017-05-19T10:15:23.947Z">
+<meta property="og:description" content="Basic knowlege of memory arch  why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen do eve">
+<meta property="og:updated_time" content="2017-05-21T02:19:52.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内存架构">
-<meta name="twitter:description" content="Basic knowlege of memory arch      why what SMP（UMA） MPP NUMA       why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cp">
+<meta name="twitter:description" content="Basic knowlege of memory arch  why to solve the mismatch of cpu and memory speed, avoid cpu hungry to decrease the frequency memory access from cpu, and access cpu cache if that have to happen do eve">
     
 
     
@@ -163,25 +163,18 @@
             </div>
         
         
-        <div class="article-entry" itemprop="articleBody">
+        <div class="article-entry" itemprop="articleBody"> 
+
+            
+            <div id="toc" class="toc-article">
+            <strong class="toc-title">目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#why"><span class="toc-number">1.</span> <span class="toc-text">why</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#what"><span class="toc-number">2.</span> <span class="toc-text">what</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#smpuma"><span class="toc-number">2.1.</span> <span class="toc-text">SMP（UMA）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mpp"><span class="toc-number">2.2.</span> <span class="toc-text">MPP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#numa"><span class="toc-number">2.3.</span> <span class="toc-text">NUMA</span></a></li></ol></li></ol>
+            </div>
+              
+            
             <blockquote>
 <p>Basic knowlege of memory arch</p>
 </blockquote>
-<div class="toc">
-
-<!-- toc -->
-<ul>
-<li><a href="#why">why</a></li>
-<li><a href="#what">what</a><ul>
-<li><a href="#smpuma">SMP（UMA）</a></li>
-<li><a href="#mpp">MPP</a></li>
-<li><a href="#numa">NUMA</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-</div>
-
 <h2 id="why"><a href="#why" class="headerlink" title="why"></a>why</h2><ul>
 <li>to solve the mismatch of cpu and memory speed, avoid cpu hungry</li>
 <li>to decrease the frequency memory access from cpu, and access cpu cache if that have to happen</li>
@@ -199,7 +192,7 @@
 
 
 
-    <a data-url="https://yfyin.github.com/2017/05/19/内存架构/" data-id="cj2vouwa0000k9conhdajllkq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yfyin.github.com/2017/05/19/内存架构/" data-id="cj2y3mzcj0001ggonp1uzemtu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
