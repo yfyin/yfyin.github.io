@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[openshift features]]></title>
+    <url>%2F2017%2F06%2F20%2Fopenshift-features%2F</url>
+    <content type="text"><![CDATA[Kernel concept:Based on kubernetes, naturally inherit the powerful features provided by k8s, such as applicatioin depoyment, scaling, LB etc. features: Management Node User Project Pod Networking Volume Quota Security Multi-tenancy IPSec and Firewall Service accounts Users and groups Authorization Policies, to control API access Image Policy, to control which images are allowed to run on your cluster Scoped Tokens, to empower another entity with limited authority Security context constraints, to control permissions for pods Secure docker buildConfig, via secret file, see secure build Container Content Scanning with External Scanning Tools Automation Building, using Source-to-Image toolkit for creating image directly from source code Deployment, based on Kubernetes Infrastructure independent deployment, whether it’s on-premise, in a public cloud, or hosted Cluster Monitoring and Auto-Scaling, based on Heapster and Kubernetes horizontal pod autoscalers CI/CD, based on jenkins Integrated Container Registry, also support third part ones Persist Storage MySQL Postgresql MongoDB MariaDB OPS Integrated Web Console Exposed openshift Rest API Exposed Kubernetes Rest API Images Monitoring and statistic Application Health check, based on Kubenetes, see here Backup and restore at cluster level Garbage Collection Container garbage collection: Removes terminated containers. Typically run every minute. Image garbage collection: Removes images not referenced by any running pods. Typically run every five minutes.Managing Security Context Constraints]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>openshift</tag>
+        <tag>PaaS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[传统工业升级中的IT技术]]></title>
     <url>%2F2017%2F06%2F12%2F%E5%B7%A5%E4%B8%9A4.0%E4%B8%AD%E7%9A%84IT%2F</url>
     <content type="text"><![CDATA[听了吴晓波的有关传统工业向智能化方向的节目，感觉很有触动，吴从汉诺威工业展的近几年的展台内容变化，洞悉未来工业发展的方向是必然是智能化和互相协作，而要达成这个目标就必须要依托于先进的IT技术，包括 cloud技术，负责设备的联网，接入，数据的收集，作为IoT的的I端存在，同时，高级的系统往往比较复杂，由各种组件构成，cloud端作为大脑中枢，负责协调部件之间的沟通交互，所以还要有一套安全，可靠的消息传递系统 基于大数据的挖掘技术，对收集来的数据，做分类，新业务模型的探测、故障模式的识别等 人工智能技术，行为的自适应，当然，这个是比较high level了，一般的工业设备还用不上，除非要造出来能模拟人类自主意识的工业机器人 这个过程应该会有点漫长，至少分三个阶段 第一阶段，传统工业设备，传感器，接入IoT云端。这个过程赋予这些设备生命力，从此不再是一个个信息孤岛，像一个个老黄牛向埋头苦干，cloud会来倾听它们发出的声音，同时这些数据被移动、PC端的application重新的组合定义规则，展示出来因为互联网相关的技术都是现成，个人感觉，这个过程5~10年就差不多成熟稳定了，当前正处在这个阶段 第二阶段，大数据挖掘。现在很多的公司都在研究这个东西，可是真正对得起其付出的产品和应用却寥寥无几，基本上还在跟风状态。一方面是大数据技术方兴未艾，还在不断的发展中，只停留在纯技术层面，结合领域的应用比较匮乏，另一方面，对于这个大数据究竟能用做什么，怎么做，能实现什么商业价值，如何变现到企业的利润，普遍没有很好的想法，就好比互网联刚开始的时候，没有什么明确的盈利模式，直到yahoo找到卖广告这条路后才确定这是个大金矿。所以，现在能做的事情，也只是把第一个阶段的数据拿过来，做一个大数据的框架，放在那里，然后慢慢思考，研究怎么用好这些数据，提供哪些增值服务客户会买单。 第三阶段，智能化。这个比较超前，暂时没有很好的想法，可能未来的有这个么一个场景：基于你的消费习惯，智能算法会提取你的性格特征，行为模式，抽象出一个你在cyber空间里的虚拟形象，并预测你可能喜欢的产品和款式等，然后在你想要刚好有某个需求而没有现有产品满足要求的时候，直接雪中送炭地推送给你它的预测，并支持高度的定制，从选材的等级，到功能的自定义，印刷的logo，到包装配送一律可以自由选择，提交订单后，被无人工厂的自动订单系统接单，需求会系统自动分解成制造逻辑，分发给各个制造子系统并开启生产。 目前看的最清楚的是第一个阶段，这个阶段，对IoT架构师的需求是非常大的，尤其是既懂一定硬件开发知识，同时又对互联网高性能，可用和扩展精通的人第二个阶段，从目前看，可能更多是提供数据服务，比如从cloud框架导出数据到大数据框架，再由后者提供多维度的数据分解，分析，报表的功能]]></content>

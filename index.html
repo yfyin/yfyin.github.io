@@ -315,6 +315,189 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yfyin.github.com/2017/06/20/openshift-features/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wild Horse">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/20/openshift-features/" itemprop="url">openshift features</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-20T16:01:36+08:00">
+                2017-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Kernel concept:<br>Based on kubernetes, naturally inherit the powerful features provided by k8s, such as applicatioin depoyment, scaling, LB etc.</p>
+<p>features:</p>
+<h1 id="management"><a href="#Management" class="headerlink" title="Management"></a>Management</h1><ul>
+<li>Node </li>
+<li>User</li>
+<li>Project</li>
+<li>Pod</li>
+<li>Networking</li>
+<li>Volume</li>
+<li>Quota</li>
+</ul>
+<h1 id="security"><a href="#Security" class="headerlink" title="Security"></a>Security</h1><ul>
+<li>Multi-tenancy</li>
+<li>IPSec and Firewall</li>
+<li>Service accounts</li>
+<li>Users and groups</li>
+<li>Authorization Policies, to control API access</li>
+<li>Image Policy, to control which images are allowed to run on your cluster</li>
+<li>Scoped Tokens, to empower another entity with limited authority</li>
+<li>Security context constraints, to control permissions for pods</li>
+<li>Secure docker buildConfig, via secret file, see <a href="https://docs.openshift.org/latest/security/build_process.html#security-build" target="_blank" rel="external">secure build</a></li>
+<li>Container Content Scanning with External Scanning Tools</li>
+</ul>
+<h1 id="automation"><a href="#Automation" class="headerlink" title="Automation"></a>Automation</h1><ul>
+<li>Building, using Source-to-Image toolkit for creating image directly from source code</li>
+<li>Deployment, based on Kubernetes</li>
+<li>Infrastructure independent deployment, whether it’s on-premise, in a public cloud, or hosted</li>
+<li>Cluster Monitoring and Auto-Scaling, based on Heapster and Kubernetes horizontal pod autoscalers</li>
+<li>CI/CD, based on jenkins</li>
+<li>Integrated Container Registry, also support third part ones</li>
+</ul>
+<h1 id="persist-storage"><a href="#Persist-Storage" class="headerlink" title="Persist Storage"></a>Persist Storage</h1><ul>
+<li>MySQL</li>
+<li>Postgresql</li>
+<li>MongoDB</li>
+<li>MariaDB</li>
+</ul>
+<h1 id="ops"><a href="#OPS" class="headerlink" title="OPS"></a>OPS</h1><ul>
+<li>Integrated Web Console </li>
+<li>Exposed openshift Rest API</li>
+<li>Exposed Kubernetes Rest API  </li>
+<li>Images Monitoring and statistic</li>
+<li>Application Health check, based on Kubenetes, see <a href="https://kubernetes.io/docs/user-guide/walkthrough/k8s201/#application-health-checking" target="_blank" rel="external">here</a></li>
+<li>Backup and restore at cluster level</li>
+<li>Garbage Collection<ul>
+<li>Container garbage collection: Removes terminated containers. Typically run every minute.</li>
+<li>Image garbage collection: Removes images not referenced by any running pods. Typically run every five minutes.<br>Managing Security Context Constraints</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://yfyin.github.com/2017/06/12/工业4.0中的IT/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1077,7 +1260,7 @@ scp ./xxx fire:~/
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1099,7 +1282,7 @@ scp ./xxx fire:~/
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
